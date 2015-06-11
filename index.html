@@ -82,8 +82,16 @@
 	  
 	  <div class="col-md-4">
 	  
-	  <div align="center"><br/><button onclick="scanIps()">Scan IP adresses</button></div><br/>			
+	  <div align="center"><br/><button onclick="scanIps()">Scan IP adresses</button></div><div align="center"><br/>
+	  <div class="progress"><div id="ipbar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div></div>
+	  <button onclick="crackComputers()">Crack Computers</button></div><br/>			
+	  <div class="progress"><div id="crackbar" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div></div>
+		<!--
 		<div class="progress"><div id="ipbar" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="sr-only">60% Complete</span></div></div>	  	
+		
+		<div class="progress"><div id="crackbar" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="sr-only">60% Complete</span></div></div>
+		-->
+
 	  </div>
 	  
 	  
@@ -102,10 +110,6 @@
 
 	  	<h3 align="center">Compromised Computers</h3>
 	  	<table class="table table-bordered">
-	  		<tr>
-	  			<td>Scanned Computers:</td>
-	  			<td id="scanned">0</td>
-	  		</tr>
 	  		<tr>
 	  			<td>Uncracked Computers:</td>
 	  			<td id="uncracked">0</td>
