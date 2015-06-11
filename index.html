@@ -8,6 +8,7 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="UI.css">
 <script src="mainscript.js"></script>
+<script src="scanning-cracking.js"></script>
 <title>Project</title>
 </head>
 
@@ -76,12 +77,40 @@
           </div>
         </div>
       </div>
-    </div>
+
 	  
 	  
-	  <div class="col-md-4"><h3 align="center">Buttons</h3></div>
-	  <div class="col-md-4"><h3 align="center">Computers</h3></div>
-	</div>
+	  <div class="col-md-4">
+	  
+	  <div align="center"><br/><button onclick="scanIps()">Scan IP adresses</button></div><br/>			
+		<div class="progress"><div id="ipbar" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="sr-only">60% Complete</span></div></div>	  	
+	  </div>
+	  
+	  
+	  <div class="col-md-4">
+	  	<h3 align="center">Computers</h3>
+	  	<table class="table table-bordered">
+	  		<tr>
+	  			<td>Scanned Computers:</td>
+	  			<td id="scanned">0</td>
+	  		</tr>
+	  		<tr>
+	  			<td>Uncracked Computers:</td>
+	  			<td id="uncracked">0</td>
+	  		</tr>
+	  		<tr>
+	  			<td>Rooted Computers:</td>
+	  			<td id="rooted">0</td>
+	  		</tr>
+	  		<tr>
+	  			<td>Botnet Computers:</td>
+	  			<td id="botnet">0</td>
+	  		</tr>
+
+
+	  	</table>
+	  </div>
+
 
 		
 </body>

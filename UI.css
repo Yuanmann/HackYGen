@@ -7,7 +7,7 @@
 .cur-p {
 	cursor: pointer;
 }
-h1,h2,h3,h4,h5,h6,p,a{color:lime;}
+h1,h2,h3,h4,h5,h6,p,a,td{color:lime;}
 li.list-group-item{background-color:#222; color:lime;}
 a.panel-title{color:lime;}
 
