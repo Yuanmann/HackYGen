@@ -4,6 +4,9 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="UI.css">
 <script src="mainscript.js"></script>
 <title>Project</title>
 </head>
@@ -13,13 +16,75 @@
 	<div class="page-header">
   		<h4>&nbsp;&nbsp;Yuan: ¥0.00</h4>
 	</div>
-	
-	<div class="row">
-	  <div class="col-md-4"><h3 align="center">Upgrades</h3></div>
+<div class="col-md-4">	
+    <!-- tabs -->
+      <div id="nav-tab-content" light>
+      <!-- nav pills -->
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+          <li class="active" style="background-color:#222;"><a href="#tab-hardware" data-toggle="tab" aria-expanded="false" style="color:lime; background-color:#222;"> Hardware</a></li>
+          <li class="" style="background-color:#222;"><a href="#tab-software" data-toggle="tab" aria-expanded="true" style="color:lime; background-color:#222;"> Software</a></li>
+         </ul>
+      <!-- tabs-content -->
+        <div id="tab-content" class="tab-content" style="max-height: 805px; overflow-y: auto;">
+          <div class="tab-pane fade" id="tab-software">
+            <div class="panel panel-default">
+              <div class="panel-heading" style="background-color:#222;">
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#upgrade-software" href="javascript:" class="collapsed" aria-expanded="false" style="color:lime;">Upgrade Operating System</a></h4>
+                <div id="upgrade-software" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                  <div class="panel-body">
+                    <ul id="upgrade-OS" class="list-group"><li id="upgrade-OS1" class="list-group-item cur-p" onclick="Upgrade();" ><b>Lindows 1 </b>: Processing Speed x3 - <i>cost $10</i></li><li id="upgrade-OS2" class="list-group-item cur-p" onclick="Upgrade();"><b>Lindows 2 </b>: Processing Speed x4 - <i>cost $100</i></li></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" style="background-color:#222;">
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#purchase-warez-panel" href="javascript:" class="collapsed" aria-expanded="false" style="color:lime;">Purchase Warez</a></h4>
+                <div id="purchase-warez-panel" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                  <div class="panel-body">
+                    <ul id="purchase-warez-list" class="list-group"><li id="purchase-warez-1" class="list-group-item cur-p" onclick="Upgrade();"><b>Jake The Ripper </b>: Cracking Time /1.5 - <i>cost $90</i></li></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- Divides Boxes-->
+          
+          <div class="tab-pane fade active in" id="tab-hardware">
+            <div class="panel panel-default">
+              <div class="panel-heading" style="background-color:#222;">
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#purchase-computer-panel" href="javascript:" class="collapsed" style="color:lime;">Computer Store</a></h4>
+                <div id="purchase-computer-panel" class="panel-collapse collapse" style="height: 0px;">
+                  <div class="panel-body">
+                    <ul id="purchase-computer" class="list-group"><li id="purchase-computer-1" class="list-group-item cur-p" onclick="Build.buy(0, 0);"><b>Dewlett Snackard M-Series</b> cost : $250<br>Processing Speed: 500bps<span id="computers-owned-1" ><div align="right">0 owned</div></span></li><li id="purchase-computer-2" class="list-group-item cur-p" onclick="Build.buy(1, 0);"><b>Dewlett Snackard S-Series</b> cost : $500,000<br>Processing Speed: 1Mbps<span id="computers-owned-2" ><div align="right">0 owned</div></span></li><li id="purchase-computer-3" class="list-group-item cur-p" onclick="Build.buy(2, 0);"><b>Twoshiba Inu</b> cost : $25.000 million <br>Processing Speed: 25Mbps<span id="computers-owned-3" ><div align="right">0 owned</div></span></li><li id="purchase-computers-4" class="list-group-item cur-p" onclick="Build.buy(3, 0);"><b>Compact 5230</b> cost : $750.000 million <br>Processing Speed: 100Mbps<span id="computers-owned-4" ><div align="right">0 owned</div></span></li></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" style="background-color:#222;">
+                <h4 class="panel-title light center"><a data-toggle="collapse" data-parent="#accordion" data-target="#purchase-peripheral-panel" href="javascript:" class="collapsed" style="color:lime;">Purchase Peripherals</a></h4>
+                <div id="purchase-peripheral-panel" class="panel-collapse collapse" style="height: 0px;">
+                  <div class="panel-body">
+                    <ul id="purchase-peripheral" class="list-group"><li id="purchase-peripheral-1" class="list-group-item cur-p" onclick="Dealer.buy(0, 0);"><b>Signal Booster</b> : $250<br> Increase Upload Rate: 10bps<span id="peripherals-owned-1" ><div align="right">0 owned</div></span></li></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	  
+	  
 	  <div class="col-md-4"><h3 align="center">Buttons</h3></div>
 	  <div class="col-md-4"><h3 align="center">Computers</h3></div>
 	</div>
-		
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><p>Temporarily borrowing code from <a href="http://totominc.github.io/blackmarket">totominc.github.io/blackmarket</a></p>		
 </body>
 
 </html>

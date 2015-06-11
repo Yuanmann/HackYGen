@@ -1,1 +1,4 @@
-﻿alert("5");
+﻿function Upgrade()
+{
+alert("purchased");
+}
